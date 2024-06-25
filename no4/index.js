@@ -23,7 +23,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     cookie: {
-      secure: false, // Change to true in production with HTTPS
+      secure: false,
       maxAge: 1000 * 60 * 60 * 24,
     },
   })
