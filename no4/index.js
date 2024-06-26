@@ -292,7 +292,7 @@ async function addTask(req, res) {
   } catch (error) {
     console.error("Error adding task:", error);
     req.flash("danger", "Failed to add task. Please try again.");
-    res.redirect(`/collections-detail/${collectionId}/add-task`);
+    res.redirect(`/collections-detail/add-task/${collectionId}`);
   }
 }
 
@@ -339,9 +339,9 @@ async function login(req, res) {
 
 async function register(req, res) {
   const { username, email, password } = req.body;
-  const saltRounds = 10;
+  const crypt = 10;
 
-  bcrypt.hash(password, saltRounds, async (err, hash) => {
+  bcrypt.hash(password, crypt, async (err, hash) => {
     if (err) throw err;
 
     const query = `
