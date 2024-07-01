@@ -113,13 +113,17 @@
                 aria-label="Checkbox for following text input"
               />
             </div>
-                        <div
+            <div
               class="btn-group"
               role="group"
               aria-label="Basic mixed styles example"
             >
               <form method="POST" action="/task-update/{{this.id}}">
-                <button type="submit" class="btn btn-success">Update</button>
+                <button
+                  type="submit"
+                  class="btn btn-success"
+                  style="padding-bottom:10px"
+                >Update</button>
               </form>
               <form method="POST" action="/task-delete/{{this.id}}">
                 <button type="submit" class="btn btn-danger">Delete</button>
@@ -138,13 +142,14 @@
               type="text"
               value="{{this.name}}"
               aria-label="Disabled input example"
-              style="background-color: white;"
+              style="background-color: rgb(253, 253, 253);"
               disabled
               readonly
             />
+
             <div class="input-group-text">
               <input
-                class="form-check-input mt-0"
+                class="form-check-input mt-0 border-0"
                 type="checkbox"
                 id="is_done_{{this.id}}"
                 name="is_done"
@@ -152,7 +157,7 @@
                 checked
                 aria-label="Checkbox for following text input"
               />
-          </div>
+            </div>
             <div
               class="btn-group"
               role="group"
