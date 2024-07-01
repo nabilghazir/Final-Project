@@ -65,6 +65,13 @@
     {{! body }}
     <div class="container-fluid w-50 my-5">
       <h1 class="text-center">Add a Task</h1>
+      {{#if messages.danger}}
+        <div class="alert alert-danger" role="alert">
+          <div class="container">
+            {{messages.danger}}
+          </div>
+        </div>
+      {{/if}}
       <form
         method="post"
         action="/collections-detail/add-task/{{collectionId}}"

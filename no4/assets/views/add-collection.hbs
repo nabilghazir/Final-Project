@@ -66,6 +66,13 @@
 
     <div class="container-fluid w-50 my-5">
       <h1 class="text-center">Add a Collection</h1>
+      {{#if messages.danger}}
+        <div class="alert alert-danger" role="alert">
+          <div class="container">
+            {{messages.danger}}
+          </div>
+        </div>
+      {{/if}}
       <form method="post" action="/add-collections">
         <div class="mb-3" style="margin-top:100px">
           <label for="name" class="form-label">Add Collection</label>

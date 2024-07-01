@@ -51,6 +51,13 @@
     </nav>
 
     <div class="container-fluid w-50 my-5">
+       {{#if messages.danger}}
+        <div class="alert alert-danger" role="alert">
+          <div class="container">
+            {{messages.danger}}
+          </div>
+        </div>
+      {{/if}}
       <div class="d-grid gap-5 d-md-flex align-items-center">
         <div>
           <button type="button" class="btn btn-secondary">

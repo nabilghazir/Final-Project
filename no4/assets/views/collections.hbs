@@ -63,6 +63,13 @@
     </nav>
     {{! Body }}
     <h1 class="container-fluid m-5">My Collections</h1>
+    {{#if messages.danger}}
+      <div class="alert alert-danger" role="alert">
+        <div class="container">
+          {{messages.danger}}
+        </div>
+      </div>
+    {{/if}}
     <div class="container-fluid m-5">
       <div class="row row-cols-1 row-cols-md-4 g-4">
         {{#each collections}}
